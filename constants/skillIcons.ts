@@ -1,0 +1,26 @@
+// src/constants/skillIcons.ts
+export const skillIcons: Record<string, string> = {
+  "NestJS": "logos:nestjs",
+  "Express.js": "logos:express",
+  "Socket.io": "logos:socket-io",
+  "PostgreSQL": "logos:postgresql",
+  "MongoDB": "logos:mongodb",
+  "C++": "logos:c-plusplus",
+  "HTML": "logos:html-5",
+  "CSS": "logos:css-3",
+  "JavaScript": "logos:javascript",
+  "TypeScript": "logos:typescript-icon",
+  "Solidity": "logos:solidity",
+  "Move": "logos:move",
+  "Next.js": "logos:nextjs",
+  "React": "logos:react",
+  "Redux Toolkit": "logos:redux",
+  "React Hook Form": "simple-icons:reacthookform",
+  "React Query": "simple-icons:reactquery",
+  "MUI": "logos:material-ui",
+  "AntD": "logos:ant-design",
+  "Tailwind": "logos:tailwindcss-icon",
+  "Shadcn UI": "simple-icons:shadcn-ui",
+  "GSAP": "logos:greensock",
+  "threejs": "logos:threejs"
+};

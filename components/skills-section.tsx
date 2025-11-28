@@ -1,39 +1,12 @@
-export const SkillsSection = () => {
-  const skillTags = [
-    "NestJS",
-    "Express.js",
-    "Socket.io",
-    "PostgreSQL",
-    "MongoDB",
-    "C++",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "Solidity",
-    "Move",
-    "Next.js",
-    "React",
-    "Redux Toolkit",
-    "React Hook Form",
-    "React Query",
-    "MUI",
-    "AntD",
-    "Tailwind",
-    "Shadcn UI",
-    "GSAP",
-    "threejs",
-  ];
+import { Divider } from "./Divider";
+import SkillsMarquee from "./SkillsInfiniteScroll";
 
+export const SkillsSection = () => {
   return (
-    <section className="skills-section">
-      <h2>Our Skills</h2>
-      <ul>
-        <li>Web Development</li>
-        <li>Graphic Design</li>
-        <li>Digital Marketing</li>
-        <li>Project Management</li>
-      </ul>
+    <section className="skills-section mb-20">
+      <h2 className="text-4xl text-center mb-6">My Skills</h2>
+      <Divider />
+      <SkillsMarquee />
     </section>
   );
 };
