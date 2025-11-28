@@ -11,7 +11,6 @@ import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import { GlowingButton } from "./GlowingButton";
 
-// Tạo trục với chiều dài 5 đơn vị
 
 export function Room(props: any) {
   const { nodes, materials, scene } = useGLTF("/models/my_room.glb") as any;
@@ -19,7 +18,6 @@ export function Room(props: any) {
   const buttonMaterial = new THREE.MeshStandardMaterial({ color: "red" });
   const buttonMesh = new THREE.Mesh(buttonGeometry, buttonMaterial);
 
-  // Đặt vị trí nút trong model
   buttonMesh.position.set(0, 1, 0); // X, Y, Z
   buttonMesh.name = "myButton";
   // const axesHelper = new THREE.AxesHelper(5);
