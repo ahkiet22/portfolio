@@ -3,7 +3,7 @@ export default function Navigation() {
   const navItems = ["About", "Skills", "Projects", "Experience", "Contact"];
 
   return (
-    <nav className="container-custom py-6 hidden md:flex items-center justify-center gap-12">
+    <nav className="container-custom hidden md:flex items-center justify-center gap-12">
       {navItems.map((item) => (
         <a
           key={item}

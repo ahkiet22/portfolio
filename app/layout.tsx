@@ -30,10 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${ibmPlexMono.variable} antialiased`}
-      >
-        <main>{children}</main>
+      <body className={`${ibmPlexMono.variable} antialiased`}>
+        <div className="black-background"></div>
+        <div className="water-glow"></div>
+        <div className="retro-background"></div>
+        {children}
       </body>
     </html>
   );

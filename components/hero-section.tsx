@@ -3,6 +3,7 @@
 import gsap from "gsap"; // <-- import GSAP
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { Hero3D } from "./models/hero-3d";
 
 export const HeroSection = () => {
   const description = useRef<HTMLParagraphElement | null>(null);
@@ -53,8 +54,8 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <div className="mt-20">
-      <div>
+    <section className="relative z-10 xl:mt-20 mt-32 h-[80vh] flex xl:items-center items-start justify-center">
+      <div className="md:w-full w-screen md:px-20 px-5 z-10">
         <h1 ref={title} className="text-4xl font-medium">
           Hi I&apos;m Kiet
         </h1>
@@ -70,7 +71,7 @@ export const HeroSection = () => {
             <br /> web applications.
           </p>
         </div>
-        <div className="flex">
+        {/* <div className="flex">
           {Array.from({ length: 5 }).map((_, index) => (
             <div
               key={index}
@@ -86,8 +87,13 @@ export const HeroSection = () => {
               />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
-    </div>
+      <figure>
+        <div className="xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-10 top-24 xl:-right-20 right-0 rounded-xl overflow-hidden">
+          <Hero3D />
+        </div>
+      </figure>
+    </section>
   );
 };

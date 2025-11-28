@@ -36,8 +36,7 @@ export default function Home() {
   return (
     <div className="relative w-full mx-auto px-6 sm:px-4 md:p-0 container">
       <Header onThemeToggle={toggleTheme} isDark={isDark} />
-      <Navigation />
-      <main>
+      <main className="transition-colors duration-500">
         <HeroSection />
       </main>
     </div>
