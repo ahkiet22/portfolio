@@ -13,8 +13,8 @@ import { GlowingButton } from "./GlowingButton";
 
 // Tạo trục với chiều dài 5 đơn vị
 
-export function Room(props) {
-  const { nodes, materials, scene } = useGLTF("/models/my_room.glb");
+export function Room(props: any) {
+  const { nodes, materials, scene } = useGLTF("/models/my_room.glb") as any;
   const buttonGeometry = new THREE.BoxGeometry(0.2, 0.1, 0.05);
   const buttonMaterial = new THREE.MeshStandardMaterial({ color: "red" });
   const buttonMesh = new THREE.Mesh(buttonGeometry, buttonMaterial);
