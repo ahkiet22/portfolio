@@ -34,8 +34,8 @@ const alphabetFull: string[] = [
   "Tailwind",
   "Shadcn UI",
   "GSAP",
-  "threejs"
-]
+  "threejs",
+];
 
 // const alphabetFull: string[] = [
 //   "A",
@@ -91,7 +91,6 @@ const alphabetFull: string[] = [
 //   "y",
 //   "z",
 // ];
-
 
 const colors = [
   "text-red-500",
@@ -158,7 +157,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="relative">
+    <div ref={sectionRef}>
       <Header />
       <main className="transition-colors duration-500">
         {/* alphabet letters hidden initially */}

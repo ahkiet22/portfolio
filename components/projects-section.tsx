@@ -66,13 +66,14 @@ export const ProjectsSection = () => {
       <h2 className="text-4xl font-bold text-center mb-10">Projects</h2>
       <Divider />
 
-      <div className="flex flex-col gap-y-8 mt-10 max-w-4xl mx-auto">
+      <div className="flex flex-col gap-y-8 mt-10 max-w-4xl mx-auto px-4 md:px-0">
         {projects.map((project, idx) => (
           <div
             key={idx}
-            className="project-card flex w-full h-[250px] bg-background/10 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg hover:shadow-indigo-500/20 transition-shadow"
+            className="project-card flex flex-col md:flex-row w-full bg-background/10 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg hover:shadow-indigo-500/20 transition-shadow"
           >
-            <div className="group flex flex-col p-6 w-[60%]">
+            {/* Text content */}
+            <div className="group flex flex-col p-6 md:w-[60%]">
               <div className="flex items-center gap-x-2 mb-4">
                 <h3 className="text-2xl font-semibold group-hover:text-indigo-400 transition">
                   {project.title}
@@ -97,8 +98,10 @@ export const ProjectsSection = () => {
                 ))}
               </div>
             </div>
-            <div className="flex items-center flex-1 p-2">
-              <div className="w-full max-w-sm aspect-video relative">
+
+            {/* Image */}
+            <div className="flex items-center justify-center md:flex-1 p-2">
+              <div className="w-full md:max-w-sm aspect-video relative">
                 <Image
                   src="/nftt.png"
                   alt="Example"

@@ -7,10 +7,12 @@ import { Room } from "./Room";
 import { HeroLights } from "./HeroLights";
 import { GlowingButton } from "./GlowingButton";
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 export const Hero3D = () => {
   const [spot1, setSpot1] = useState(true);
   const [enabled, setEnabled] = useState(true);
+  const isTablet = useMediaQuery({ minWidth: 400, maxWidth: 1024 });
 
   const playToggleOn = () => {
     const audioContext = new (window.AudioContext ||
@@ -64,7 +66,7 @@ export const Hero3D = () => {
     }
   };
 
-  const isTablet = false;
+
   return (
     <Canvas camera={{ position: [0, 30, 50], fov: 45 }} className="cursor-grab">
       <HeroLights spot1={spot1} enabled={enabled} />
@@ -81,7 +83,7 @@ export const Hero3D = () => {
       />
 
       {/* Đặt TinyIsometricRoom trong nhóm và xoay nhóm */}
-      <group position={[0, -8, 0]} scale={1} rotation={[0, -Math.PI / 4, 0]}>
+      <group position={[0, -8, 0]} scale={isTablet ? 0.8 : 1} rotation={[0, -Math.PI / 4, 0]}>
         <Room />
         <GlowingButton
           position={[10, 15, -11.2]}

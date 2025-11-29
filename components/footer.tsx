@@ -22,13 +22,13 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-10">
-      <div className="container-layout flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="bg-gray-900 text-white py-10 w-full">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Logo / Name */}
         <div className="text-2xl font-bold">MyPortfolio</div>
 
         {/* Social links */}
-        <div className="flex gap-4">
+        {/* <div className="flex gap-4">
           {socialLinks.map((link) => (
             <a
               key={link.href}
@@ -40,7 +40,7 @@ export default function Footer() {
               <Icon icon={link.icon} width={24} height={24} />
             </a>
           ))}
-        </div>
+        </div> */}
 
         {/* Quick links */}
         <div className="flex gap-4 text-sm">

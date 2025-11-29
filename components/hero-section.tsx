@@ -62,24 +62,24 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="container-layout relative z-10 xl:mt-20 mt-32 h-[83vh] flex xl:items-center items-start justify-center">
+    <section className="container-layout relative z-10 xl:mt-20 mt-30 h-[83vh] flex xl:items-center items-start justify-center">
       <div className="md:w-full w-screen md:px-20 px-5 z-10">
-        <h1 ref={title} className="text-4xl font-medium">
+        <h1 ref={title} className="text-4xl font-medium max-md:text-center max-md:text-3xl">
           Hi I&apos;m Kiet
         </h1>
-        <div className="mt-6 text-5xl font-medium text-neutral-300">
+        <div className="mt-6 text-5xl font-medium text-neutral-300 max-md:text-center max-md:text-4xl">
           <p ref={description}>
             I specialize in <br />
             <span
               ref={textDynamic}
-              className="text-6xl text-blue-500 font-bold"
+              className="text-6xl text-blue-500 font-bold max-md:text-5xl"
             >
               {text}
             </span>{" "}
             <br /> web applications.
           </p>
         </div>
-        <div className="flex gap-x-2 mt-6">
+        <div className="flex max-md:justify-center gap-x-2 mt-6">
           {socialLinks.map((link, index) => (
             <Link
               key={index}
@@ -122,7 +122,7 @@ export const HeroSection = () => {
         </div> */}
       </div>
       <figure>
-        <div className="xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-10 top-24 xl:-right-20 right-0 rounded-xl overflow-hidden">
+        <div className="md:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-10 md:-top-30 top-30 right-0 rounded-xl overflow-hidden">
           <Hero3D />
         </div>
       </figure>
