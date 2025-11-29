@@ -23,17 +23,24 @@ const projects: Project[] = [
     link: "https://github.com/ahkiet22/portfolio",
   },
   {
-    title: "E-commerce Platform",
+    title: "FastE (E-commerce)",
     description:
       "A full-stack e-commerce platform with NestJS backend and Next.js frontend.",
     techs: ["NestJS", "Next.js", "PostgreSQL"],
     link: "https://github.com/FastE2",
   },
   {
-    title: "Blockchain App",
+    title: "Pixelcred",
     description:
-      "A dApp built with Solidity smart contracts, integrating Web3 wallet.",
-    techs: ["Solidity", "Web3"],
+      "This application allows users to create and manage personal developer profiles on the Sui blockchain (testnet).",
+    techs: ["Move", "Walrus", "Pinata", "Next.js"],
+    link: "https://github.com/ahkiet22/pixelcred",
+  },
+  {
+    title: "Donate to me",
+    description:
+      "A dApp built with Solidity smart contracts, integrating Web3 wallet (testnet).",
+    techs: ["Solidity", "Web3", "Next.js"],
     link: "https://github.com/ahkiet22/donate-to-me",
   },
 ];
