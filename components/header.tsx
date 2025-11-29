@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="rounded-4xl px-4 sticky top-10 z-50 bg-background/20 backdrop-blur-lg border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]"
+      className="w-full mx-auto container rounded-4xl px-6 sticky top-10 z-50 bg-background/20 backdrop-blur-lg border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]"
     >
       <div className="container-custom py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
