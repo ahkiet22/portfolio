@@ -4,6 +4,8 @@ import gsap from "gsap"; // <-- import GSAP
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Hero3D } from "./models/hero-3d";
+import Link from "next/link";
+import { Icon } from "@iconify/react/dist/iconify.cjs";
 
 export const HeroSection = () => {
   const description = useRef<HTMLParagraphElement | null>(null);
@@ -13,6 +15,12 @@ export const HeroSection = () => {
   const [text, setText] = useState("Secure");
 
   const messages = ["Secure", "Modern", "Scalable"];
+  const socialLinks = [
+    { href: "https://www.facebook.com/kiet1822", icon: "ic:baseline-facebook" },
+    { href: "https://github.com/ahkiet22", icon: "mdi:github" },
+    { href: "http://linkedin.com/in/ahkiet/", icon: "mdi:linkedin" },
+    { href: "https://t.me/ichibid22", icon: "ic:baseline-telegram" },
+  ];
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -54,7 +62,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative z-10 xl:mt-20 mt-32 h-[80vh] flex xl:items-center items-start justify-center">
+    <section className="container-layout relative z-10 xl:mt-20 mt-32 h-[83vh] flex xl:items-center items-start justify-center">
       <div className="md:w-full w-screen md:px-20 px-5 z-10">
         <h1 ref={title} className="text-4xl font-medium">
           Hi I&apos;m Kiet
@@ -70,6 +78,30 @@ export const HeroSection = () => {
             </span>{" "}
             <br /> web applications.
           </p>
+        </div>
+        <div className="flex gap-x-2 mt-6">
+          {socialLinks.map((link, index) => (
+            <Link
+              key={index}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                group
+                flex items-center justify-center
+                w-10 h-10 rounded-full
+                transition-all duration-300
+                hover:bg-black/20 hover:scale-110
+              "
+            >
+              <Icon
+                icon={link.icon}
+                width="30"
+                height="30"
+                className="text-white transition-colors duration-300"
+              />
+            </Link>
+          ))}
         </div>
         {/* <div className="flex">
           {Array.from({ length: 5 }).map((_, index) => (

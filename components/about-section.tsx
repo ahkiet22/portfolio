@@ -1,16 +1,16 @@
+import { Divider } from "./Divider";
+
 export const AboutSection = () => {
   return (
-    <section className="about-section">
-      <h2>About Us</h2>
-      <p>
-        Welcome to our website! We are dedicated to providing the best service
-        possible. Our team is passionate about what we do and we strive to
-        exceed your expectations.
-      </p>
-      <p>
-        Our mission is to create a positive impact in our community through
-        innovation, integrity, and excellence. Thank you for being a part of
-        our journey!
+    <section className="container-layout about-section mb-20">
+      <h2 className="text-4xl text-center mb-6">About</h2>
+      <Divider />
+      <p className="text-center">
+        I&apos;m an Information Technology student and a newcomer to
+        programming, passionate about exploring modern technologies. I&apos;m
+        constantly learning, improving my skills, and expanding my mindset. My
+        goal is to become a Software Engineer and make a positive impact through
+        my work.
       </p>
     </section>
   );
