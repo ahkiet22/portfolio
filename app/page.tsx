@@ -12,65 +12,100 @@ import { SkillsSection } from "@/components/skills-section";
 import { on } from "events";
 
 const alphabetFull: string[] = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
+  "NestJS",
+  "Express.js",
+  "Socket.io",
+  "PostgreSQL",
+  "MongoDB",
+  "C++",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "Solidity",
+  "Move",
+  "Next.js",
+  "React",
+  "Redux Toolkit",
+  "React Hook Form",
+  "React Query",
+  "MUI",
+  "AntD",
+  "Tailwind",
+  "Shadcn UI",
+  "GSAP",
+  "threejs"
+]
+
+// const alphabetFull: string[] = [
+//   "A",
+//   "B",
+//   "C",
+//   "D",
+//   "E",
+//   "F",
+//   "G",
+//   "H",
+//   "I",
+//   "J",
+//   "K",
+//   "L",
+//   "M",
+//   "N",
+//   "O",
+//   "P",
+//   "Q",
+//   "R",
+//   "S",
+//   "T",
+//   "U",
+//   "V",
+//   "W",
+//   "X",
+//   "Y",
+//   "Z",
+//   "a",
+//   "b",
+//   "c",
+//   "d",
+//   "e",
+//   "f",
+//   "g",
+//   "h",
+//   "i",
+//   "j",
+//   "k",
+//   "l",
+//   "m",
+//   "n",
+//   "o",
+//   "p",
+//   "q",
+//   "r",
+//   "s",
+//   "t",
+//   "u",
+//   "v",
+//   "w",
+//   "x",
+//   "y",
+//   "z",
+// ];
+
+
+const colors = [
+  "text-red-500",
+  "text-blue-500",
+  "text-green-500",
+  "text-yellow-500",
+  "text-purple-500",
 ];
 
 export default function Home() {
   const textRef = useRef<Array<HTMLDivElement | null>>([]);
   const sectionRef = useRef<HTMLDivElement>(null);
   const currentRef = useRef(0);
-  const distanceThreshold = 50;
+  const distanceThreshold = 100;
   const lastX = useRef(0);
   const lastY = useRef(0);
   const z = useRef(0);
@@ -134,7 +169,10 @@ export default function Home() {
               ref={(el) => {
                 textRef.current[idx] = el;
               }}
-              className="hidden text-white font-bold text-xl pointer-events-none select-none w-2 h-2"
+              className={`
+                hidden font-bold text-xl pointer-events-none select-none w-8 h-2
+                ${colors[idx % colors.length]}
+              `}
             >
               {char}
             </div>
