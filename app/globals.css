@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-vt: "PixelFont", cursive;
 }
 
 @theme inline {
@@ -102,4 +103,39 @@ body {
 
 .container-layout {
   @apply w-full mx-auto px-6 sm:px-4 md:p-0 container;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.stroke-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 1px;
+  background: transparent;
+  background-clip: text;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient-animation {
+  background: linear-gradient(to bottom left, #00bcd4, #673ab7, #4caf50);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+/* Font */
+.font-pixel {
+  font-family: var(--font-vt);
 }

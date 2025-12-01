@@ -1,21 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Mono, Press_Start_2P, VT323 } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-ibm-plex-mono",
+});
+
+// const pixelFont = Press_Start_2P({
+//   weight: "400",
+//   subsets: ["latin"],
+//   variable: "--font-pixel",
+// });
+
+const vtFont = VT323({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-vt",
 });
 
 export const metadata: Metadata = {
@@ -74,7 +86,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ibmPlexMono.variable} antialiased`}>
+      <body
+        className={`${ibmPlexMono.variable} ${vtFont.variable} antialiased`}
+      >
         <div className="black-background"></div>
         <div className="water-glow"></div>
         <div className="retro-background"></div>

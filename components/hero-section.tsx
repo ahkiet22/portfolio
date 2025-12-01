@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { Hero3D } from "./models/hero-3d";
 import Link from "next/link";
 import { Icon } from "@iconify/react/dist/iconify.cjs";
+import { socialLinks } from "@/constants/soical";
 
 export const HeroSection = () => {
   const description = useRef<HTMLParagraphElement | null>(null);
@@ -15,12 +16,7 @@ export const HeroSection = () => {
   const [text, setText] = useState("Secure");
 
   const messages = ["Secure", "Modern", "Scalable"];
-  const socialLinks = [
-    { href: "https://www.facebook.com/kiet1822", icon: "ic:baseline-facebook" },
-    { href: "https://github.com/ahkiet22", icon: "mdi:github" },
-    { href: "http://linkedin.com/in/ahkiet/", icon: "mdi:linkedin" },
-    { href: "https://t.me/ichibid22", icon: "ic:baseline-telegram" },
-  ];
+  
 
   useEffect(() => {
     const tl = gsap.timeline();
