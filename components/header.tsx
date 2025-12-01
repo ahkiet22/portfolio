@@ -5,6 +5,7 @@ import Navigation from "./navigation";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { div } from "three/tsl";
+import Link from "next/link";
 
 interface HeaderProps {
   onThemeToggle: () => void;
@@ -31,14 +32,20 @@ export default function Header() {
       >
         <div className="container-custom py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full overflow-hidden">
+            <Link
+              href={
+                "https://rarible.com/ethereum/items/0xc9154424b823b10579895ccbe442d41b9abd96ed:13349126132604652420931328155761151029331176567565362372852467676420281204738"
+              }
+              target="_blank"
+              className="h-10 w-10 rounded-full overflow-hidden cursor-pointer"
+            >
               <Image
                 width={40}
                 height={40}
                 src="/avatar-nft.png"
                 alt="ahkiet"
               />
-            </div>
+            </Link>
             <div>
               <h1 className="font-bold text-lg">ahkiet</h1>
               <p className="text-xs text-muted-foreground">
