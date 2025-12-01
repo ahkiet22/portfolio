@@ -2,7 +2,10 @@
 
 import { socialLinks } from "@/constants/soical";
 import { Icon } from "@iconify/react";
+import gsap from "gsap";
+import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 const data = [
   {
@@ -20,9 +23,48 @@ const data = [
 ];
 
 export default function Footer() {
+  const elementRef = useRef<HTMLDivElement>(null);
+  const imageSpiderRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const element = elementRef.current;
+    const imageSpider = imageSpiderRef.current;
+
+    if (element && imageSpider) {
+      gsap.set(imageSpider, { top: 0, right: 0, opacity: 0 });
+
+      element.addEventListener("mouseenter", () => {
+        gsap.fromTo(
+          imageSpider,
+          { top: 0, right: -10, opacity: 0 },
+          { top: 100, right: -10, opacity: 1, duration: 0.3 }
+        );
+      });
+
+      element.addEventListener("mouseleave", () => {
+        gsap.to(imageSpider, { top: 0, right: 0, opacity: 0, duration: 0.3 });
+      });
+    }
+
+    return () => {
+      if (element) {
+        element.removeEventListener("mouseenter", () => {});
+        element.removeEventListener("mouseleave", () => {});
+      }
+    };
+  }, []);
+
   return (
     <footer className="text-white w-full">
-      <div className="container-layout grid grid-cols-12">
+      <div className="container-layout grid grid-cols-12 relative">
+        <div className="absolute" ref={imageSpiderRef}>
+          <Image
+            width={100}
+            height={100}
+            src={"./VP957 Baby Spider man SVG.svg"}
+            alt="Spider"
+          />
+        </div>
         <div className="grid col-span-12 lg:col-span-6 grid-rows-2">
           <div className="border-2 border-b-0 border-dashed border-black overflow-hidden lg:flex-row">
             <div className="flex">
@@ -64,7 +106,10 @@ export default function Footer() {
         </div>
 
         <div className="grid col-span-12 lg:col-span-6 grid-rows-[3fr_1fr] mt-4 lg:mt-0 lg:border-l-0 border-l-2 border-t-2 border-r-2 border-b-2 border-dashed border-black">
-          <div className="flex flex-col justify-between p-4 border-b-2 border-dashed border-black bg-gradient-animation">
+          <div
+            className="flex flex-col justify-between p-4 border-b-2 border-dashed border-black bg-gradient-animation"
+            ref={elementRef}
+          >
             <div className="font-pixel text-black text-5xl md:text-6xl">
               SUBSCRIBE
             </div>
