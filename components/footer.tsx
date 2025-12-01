@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid col-span-12 lg:col-span-6 grid-rows-[3fr_1fr] mt-4 lg:mt-0 border-t-2 border-r-2 border-b-2 border-dashed border-black">
+        <div className="grid col-span-12 lg:col-span-6 grid-rows-[3fr_1fr] mt-4 lg:mt-0 lg:border-l-0 border-l-2 border-t-2 border-r-2 border-b-2 border-dashed border-black">
           <div className="flex flex-col justify-between p-4 border-b-2 border-dashed border-black bg-gradient-animation">
             <div className="font-pixel text-black text-5xl md:text-6xl">
               SUBSCRIBE
